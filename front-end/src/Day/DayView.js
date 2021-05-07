@@ -7,7 +7,7 @@ import NoEventToday from "./NoEventToday";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiArrowBack } from "react-icons/bi";
 import NewEventDialog from "../Components/NewEventDialog";
-import DeleteEventDialog from "../Components/DeleteEventDialog";
+import { DeleteEventDialog } from "../Components/DeleteEventDialog";
 import EditEventDialog from "../Components/EditEventDialog";
 import LoadingIcon from "../Components/LoadingIcon";
 import DateSection from "./DateSection";
