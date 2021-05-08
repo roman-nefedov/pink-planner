@@ -7,7 +7,7 @@ import { RiNotification2Line } from "react-icons/ri";
 import { GrClose } from "react-icons/gr";
 import { FcCheckmark } from "react-icons/fc";
 
-import SmallLoadingIcon from "../SmallLoadingIcon";
+import { SmallLoadingIcon } from "../SmallLoadingIcon/index";
 import { NewEventCalendar } from "../NewEventCalendar/index";
 import { EditEventTime } from "../EditEventTime/index";
 import { Top, ActionsSection, ButtonCreate, ButtonClose, Title, Description,
