@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { format } from "date-fns";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiArrowBack } from "react-icons/bi";
-import NewEventDialog from "../Components/NewEventDialog";
+import { NewEventDialog } from "../Components/NewEventDialog/index";
 
 const WeekView = () => {
   let history = useHistory();

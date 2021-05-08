@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { COLORS, dateColors } from "../Constants";
 import MyCalendar from "./MyCalendar";
-import NewEventDialog from "../Components/NewEventDialog";
+import { NewEventDialog } from "../Components/NewEventDialog/index";
 import { useHistory } from "react-router-dom";
 import { format } from "date-fns";
 import { AiOutlineHome } from "react-icons/ai";

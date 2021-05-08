@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { useHistory } from "react-router-dom";
-import NewEventDialog from "./Components/NewEventDialog";
+import { NewEventDialog } from "./Components/NewEventDialog/index";
 
 const Focus = () => {
   const [task_time, setTaskTime] = useState(25);
