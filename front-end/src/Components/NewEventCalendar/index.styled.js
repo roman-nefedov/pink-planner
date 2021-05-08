@@ -1,26 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import { COLORS } from "../Constants";
-import Calendar from "react-calendar";
 
-const NewEventCalendar = ({ onChange, value, onClickDay }) => {
-  return (
-    <Wrapper>
-      <Calendar
-        onChange={onChange}
-        defaultView="month"
-        value={value}
-        prev2Label={null}
-        next2Label={null}
-        onClickDay={onClickDay}
-      />
-    </Wrapper>
-  );
-};
-
-export default NewEventCalendar;
-
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   z-index: 10;
   .react-calendar {
     max-width: 100%;

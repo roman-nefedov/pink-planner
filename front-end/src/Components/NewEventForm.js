@@ -10,7 +10,7 @@ import { GrClose } from "react-icons/gr";
 import { FcCheckmark } from "react-icons/fc";
 
 import SmallLoadingIcon from "./SmallLoadingIcon";
-import NewEventCalendar from "./NewEventCalendar";
+import { NewEventCalendar } from "./NewEventCalendar/index";
 import NewEventTime from "./NewEventTime";
 
 const NewEventForm = ({ closeDialog, refreshEvents }) => {

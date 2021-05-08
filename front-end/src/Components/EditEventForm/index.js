@@ -8,7 +8,7 @@ import { GrClose } from "react-icons/gr";
 import { FcCheckmark } from "react-icons/fc";
 
 import SmallLoadingIcon from "../SmallLoadingIcon";
-import NewEventCalendar from "../NewEventCalendar";
+import { NewEventCalendar } from "../NewEventCalendar/index";
 import { EditEventTime } from "../EditEventTime/index";
 import { Top, ActionsSection, ButtonCreate, ButtonClose, Title, Description,
          Section, Label, InputBorder, SectionInput, SectionInput2, CalendarForm,
