@@ -2,6 +2,10 @@
   "dependencies": {
     "date-fns": "^2.19.0",
     "dotenv": "^8.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
+    "react-test-renderer": "^17.0.2",
     "uuid": "^8.3.2"
   }
 }

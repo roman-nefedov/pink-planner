@@ -7,10 +7,10 @@ import { GoCalendar } from "react-icons/go";
 import { BiCalendarWeek, BiTimer } from "react-icons/bi";
 import { MdToday } from "react-icons/md";
 
-import NewsFeed from "./NewsFeed";
+// import NewsFeed from "./NewsFeed";
 import plannerLogo from "./planner_logo.png";
 import NewEventDialog from "../Components/NewEventDialog";
-import Weather from "./Weather";
+// import Weather from "./Weather";
 
 const Homepage = () => {
   const today = new Date();
@@ -88,8 +88,8 @@ const Homepage = () => {
         </ActionIcon>
       </ActionSec>
       <Focus>Focus Mode</Focus>
-      <Weather />
-      <NewsFeed today={today} />
+      {/* <Weather /> */}
+      {/* <NewsFeed today={today} /> */}
       <NewEventDialog />
     </Wrapper>
   );
