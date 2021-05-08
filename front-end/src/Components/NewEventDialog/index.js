@@ -2,7 +2,7 @@ import React, { forwardRef, useState } from "react";
 import Dialog from "@material-ui/core/Dialog";
 import Slide from "@material-ui/core/Slide";
 
-import NewEventForm from "../NewEventForm";
+import { NewEventForm } from "../NewEventForm/index";
 import { NewEventIcon } from "./index.styled";
 
 const Transition = forwardRef(function Transition(props, ref) {
