@@ -9,7 +9,7 @@ import { FcCheckmark } from "react-icons/fc";
 
 import SmallLoadingIcon from "../SmallLoadingIcon";
 import NewEventCalendar from "../NewEventCalendar";
-import EditEventTime from "../EditEventTime";
+import { EditEventTime } from "../EditEventTime/index";
 import { Top, ActionsSection, ButtonCreate, ButtonClose, Title, Description,
          Section, Label, InputBorder, SectionInput, SectionInput2, CalendarForm,
          ConfirmationBox } from "./index.styled";

@@ -1,9 +1,10 @@
 import React from "react";
-import styled from "styled-components";
-import { COLORS, HOURS, MINUTES } from "../Constants";
+import { HOURS, MINUTES } from "../../Constants";
 import { BsArrowRight } from "react-icons/bs";
 
-const NewEventTime = ({ form, setForm }) => {
+import { Label, TimeSection, TimeRange, Arrow, Select } from "./index.styled";
+
+export const EditEventTime = ({ form, setForm }) => {
   const allDaySelect = (checked) => {
     if (checked) {
       setForm({
@@ -65,7 +66,7 @@ const NewEventTime = ({ form, setForm }) => {
           <input
             type="checkbox"
             className="checkBoxBox"
-            onChange={(ev) => allDaySelect(ev.target.checked)}
+            onChange={(event) => allDaySelect(event.target.checked)}
             defaultValue={form.start.time.allday}
           />
           <label>All-day</label>
@@ -73,7 +74,7 @@ const NewEventTime = ({ form, setForm }) => {
       </TimeSection>
       <TimeRange>
         <Select
-          onChange={(ev) => onStartHourChange(ev.target.value)}
+          onChange={(event) => onStartHourChange(event.target.value)}
           defaultValue={form.start.time.hours}
         >
           <option hidden></option>
@@ -83,7 +84,7 @@ const NewEventTime = ({ form, setForm }) => {
         </Select>
         :
         <Select
-          onChange={(ev) => onStartMinChange(ev.target.value)}
+          onChange={(event) => onStartMinChange(event.target.value)}
           defaultValue={form.start.time.minutes}
         >
           <option hidden></option>
@@ -92,7 +93,7 @@ const NewEventTime = ({ form, setForm }) => {
           ))}
         </Select>
         <Select
-          onChange={(ev) => onStartAPChange(ev.target.value)}
+          onChange={(event) => onStartAPChange(event.target.value)}
           defaultValue={form.start.time.ap}
         >
           <option hidden></option>
@@ -103,7 +104,7 @@ const NewEventTime = ({ form, setForm }) => {
           <BsArrowRight />
         </Arrow>
         <Select
-          onChange={(ev) => onEndHourChange(ev.target.value)}
+          onChange={(event) => onEndHourChange(event.target.value)}
           defaultValue={form.end.time.hours}
         >
           <option hidden></option>
@@ -113,7 +114,7 @@ const NewEventTime = ({ form, setForm }) => {
         </Select>
         :
         <Select
-          onChange={(ev) => onEndMinChange(ev.target.value)}
+          onChange={(event) => onEndMinChange(event.target.value)}
           defaultValue={form.end.time.minutes}
         >
           <option hidden></option>
@@ -122,7 +123,7 @@ const NewEventTime = ({ form, setForm }) => {
           ))}
         </Select>
         <Select
-          onChange={(ev) => onEndAPChange(ev.target.value)}
+          onChange={(event) => onEndAPChange(event.target.value)}
           defaultValue={form.end.time.ap}
         >
           <option hidden></option>
@@ -133,38 +134,3 @@ const NewEventTime = ({ form, setForm }) => {
     </>
   );
 };
-const Label = styled.label`
-  padding-bottom: 10px;
-  display: block;
-  font-size: 1.2rem;
-`;
-const TimeSection = styled.div`
-  display: flex;
-  justify-content: space-between;
-  .TimeLabel {
-    display: inline-block;
-  }
-  .AllDaySection {
-    font-size: 1.2rem;
-  }
-  .checkBoxBox {
-    margin: 0 5px;
-  }
-`;
-const TimeRange = styled.div`
-  display: flex;
-  align-items: center;
-`;
-const Arrow = styled.div`
-  padding: 0 10px;
-`;
-
-const Select = styled.select`
-  appearance: none;
-  padding: 1px 6px;
-  margin: 0 2px;
-  font-size: 1.1rem;
-  border: none;
-  background-color: #f2f2f2;
-`;
-export default NewEventTime;
