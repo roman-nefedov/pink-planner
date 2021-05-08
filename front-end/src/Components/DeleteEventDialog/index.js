@@ -8,7 +8,7 @@ import Slide from "@material-ui/core/Slide";
 
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FcCheckmark } from "react-icons/fc";
-import LoadingIcon from "../LoadingIcon";
+import { LoadingIcon } from "../LoadingIcon/index";
 import { DeleteButton, ConfirmationBox } from "./index.styled";
 
 const Transition = forwardRef(function Transition(props, ref) {
