@@ -6,7 +6,7 @@ import { GrLocation } from "react-icons/gr";
 import NoEventToday from "./NoEventToday";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiArrowBack } from "react-icons/bi";
-import NewEventDialog from "../Components/NewEventDialog";
+import { NewEventDialog } from "../Components/NewEventDialog/index";
 import { DeleteEventDialog } from "../Components/DeleteEventDialog";
 import { EditEventDialog } from "../Components/EditEventDialog/index";
 import DateSection from "./DateSection";

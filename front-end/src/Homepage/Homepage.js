@@ -9,7 +9,7 @@ import { MdToday } from "react-icons/md";
 
 // import NewsFeed from "./NewsFeed";
 import plannerLogo from "./planner_logo.png";
-import NewEventDialog from "../Components/NewEventDialog";
+import { NewEventDialog } from "../Components/NewEventDialog/index";
 // import Weather from "./Weather";
 
 const Homepage = () => {
