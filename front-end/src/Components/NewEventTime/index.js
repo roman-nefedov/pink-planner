@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import { COLORS, HOURS, MINUTES } from "../Constants";
-import Calendar from "react-calendar";
-import { format } from "date-fns";
-import { FiCalendar } from "react-icons/fi";
+import React from "react";
+import { HOURS, MINUTES } from "../../Constants";
 import { BsArrowRight } from "react-icons/bs";
-import { GrLocation } from "react-icons/gr";
-import { RiNotification2Line } from "react-icons/ri";
-import { GrClose } from "react-icons/gr";
-import { FcCheckmark } from "react-icons/fc";
 
-const NewEventTime = ({ form, setForm }) => {
+import { Label, TimeSection, TimeRange, Arrow, Select } from "./index.styled"
+
+export const NewEventTime = ({ form, setForm }) => {
   const allDaySelect = (checked) => {
     if (checked) {
       setForm({
@@ -72,26 +66,26 @@ const NewEventTime = ({ form, setForm }) => {
           <input
             type="checkbox"
             className="checkBoxBox"
-            onChange={(ev) => allDaySelect(ev.target.checked)}
+            onChange={(event) => allDaySelect(event.target.checked)}
           />
           <label>All-day</label>
         </div>
       </TimeSection>
       <TimeRange>
-        <Select onChange={(ev) => onStartHourChange(ev.target.value)}>
+        <Select onChange={(event) => onStartHourChange(event.target.value)}>
           <option hidden></option>
           {HOURS.map((hour) => (
             <option>{hour}</option>
           ))}
         </Select>
         :
-        <Select onChange={(ev) => onStartMinChange(ev.target.value)}>
+        <Select onChange={(event) => onStartMinChange(event.target.value)}>
           <option hidden></option>
           {MINUTES.map((min) => (
             <option>{min}</option>
           ))}
         </Select>
-        <Select onChange={(ev) => onStartAPChange(ev.target.value)}>
+        <Select onChange={(event) => onStartAPChange(event.target.value)}>
           <option hidden></option>
           <option>AM</option>
           <option>PM</option>
@@ -99,20 +93,20 @@ const NewEventTime = ({ form, setForm }) => {
         <Arrow>
           <BsArrowRight />
         </Arrow>
-        <Select onChange={(ev) => onEndHourChange(ev.target.value)}>
+        <Select onChange={(event) => onEndHourChange(event.target.value)}>
           <option hidden></option>
           {HOURS.map((hour) => (
             <option>{hour}</option>
           ))}
         </Select>
         :
-        <Select onChange={(ev) => onEndMinChange(ev.target.value)}>
+        <Select onChange={(event) => onEndMinChange(event.target.value)}>
           <option hidden></option>
           {MINUTES.map((min) => (
             <option>{min}</option>
           ))}
         </Select>
-        <Select onChange={(ev) => onEndAPChange(ev.target.value)}>
+        <Select onChange={(event) => onEndAPChange(event.target.value)}>
           <option hidden></option>
           <option>AM</option>
           <option>PM</option>
@@ -121,38 +115,3 @@ const NewEventTime = ({ form, setForm }) => {
     </>
   );
 };
-const Label = styled.label`
-  padding-bottom: 10px;
-  display: block;
-  font-size: 1.2rem;
-`;
-const TimeSection = styled.div`
-  display: flex;
-  justify-content: space-between;
-  .TimeLabel {
-    display: inline-block;
-  }
-  .AllDaySection {
-    font-size: 1.2rem;
-  }
-  .checkBoxBox {
-    margin: 0 5px;
-  }
-`;
-const TimeRange = styled.div`
-  display: flex;
-  align-items: center;
-`;
-const Arrow = styled.div`
-  padding: 0 10px;
-`;
-
-const Select = styled.select`
-  appearance: none;
-  padding: 1px 6px;
-  margin: 0 2px;
-  font-size: 1.1rem;
-  border: none;
-  background-color: #f2f2f2;
-`;
-export default NewEventTime;

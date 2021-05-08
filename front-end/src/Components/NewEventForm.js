@@ -11,7 +11,7 @@ import { FcCheckmark } from "react-icons/fc";
 
 import { SmallLoadingIcon } from "./SmallLoadingIcon/index";
 import { NewEventCalendar } from "./NewEventCalendar/index";
-import NewEventTime from "./NewEventTime";
+import { NewEventTime } from "./NewEventTime/index";
 
 const NewEventForm = ({ closeDialog, refreshEvents }) => {
   const [form, setForm] = useState(INITIAL_EVENT);
