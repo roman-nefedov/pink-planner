@@ -20,27 +20,45 @@ export const NewEventForm = ({ closeDialog, refreshEvents }) => {
   const [buttonDisabled, setButtonDisabled] = useState(true);
   const [status, setStatus] = useState("idle");
 
+  // useEffect(() => {
+  //   if (form.title != null && form.start.date != null) {
+  //     if (form.start.time.allday === true) {
+  //       setButtonDisabled(false);
+  //     } else {
+  //       if (
+  //         form.start.time.hours != null &&
+  //         form.start.time.minutes != null &&
+  //         form.start.time.ap != null &&
+  //         form.end.time.hours != null &&
+  //         form.end.time.minutes != null &&
+  //         form.end.time.ap != null
+  //       ) {
+  //         setButtonDisabled(false);
+  //       } else {
+  //         setButtonDisabled(true);
+  //       }
+  //     }
+  //   } else {
+  //     setButtonDisabled(true);
+  //   }
+  // }, [form]);
+
+  const checkCreateEventButton = (form) => {
+    if (typeof form.title != 'string') return true;
+    if (form.title.length < 1) return true;
+    if (form.start.date == null) return true;
+    if (form.start.time.allday === true) return false; 
+    if (form.start.time.hours == null) return true;
+    if (form.start.time.minutes == null) return true;
+    if (form.start.time.ap == null) return true;
+    if (form.end.time.hours == null) return true;
+    if (form.end.time.minutes == null) return true;
+    if (form.end.time.ap != null) return false;
+    return true;
+  };
+
   useEffect(() => {
-    if (form.title != null && form.start.date != null) {
-      if (form.start.time.allday === true) {
-        setButtonDisabled(false);
-      } else {
-        if (
-          form.start.time.hours != null &&
-          form.start.time.minutes != null &&
-          form.start.time.ap != null &&
-          form.end.time.hours != null &&
-          form.end.time.minutes != null &&
-          form.end.time.ap != null
-        ) {
-          setButtonDisabled(false);
-        } else {
-          setButtonDisabled(true);
-        }
-      }
-    } else {
-      setButtonDisabled(true);
-    }
+    setButtonDisabled(checkCreateEventButton(form));
   }, [form]);
 
   const handleTitle = (value) => setForm({ ...form, title: value });
